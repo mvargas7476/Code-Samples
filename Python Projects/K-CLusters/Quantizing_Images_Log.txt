@@ -1,0 +1,10 @@
+     Image Used        :    Original size    :       K Value       :      New Size       :    Image Quality 
+         1             :        364Kb        :          3          :        38Kb         :     Missing Many deatails
+         1             :        364Kb        :          4          :        38Kb         :     Sky looks a little moe clear
+         1             :        364Kb        :          8          :        51Kb         :     Details with colors become more clear
+         2             :        613Kb        :          3          :        48Kb         :     Green only with not much more
+         2             :        613Kb        :          4          :        70Kb         :   More definition on shadows
+         2             :        613Kb        :          8          :        96Kb         :     Colors look ok, but not great
+         3             :        549Kb        :          3          :        34Kb         :   Picture looks mainly red, no hint of cream on top
+         3             :        549Kb        :          5          :        54Kb         :   Strawberries have more texture, the cream begins to look better
+         3             :        549Kb        :          8          :        78Kb         :   Cream color and strawberries have definition        
