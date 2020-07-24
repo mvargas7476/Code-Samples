@@ -1,0 +1,15 @@
+Link to the Tic-Tac-Toe Data set used: https://archive.ics.uci.edu/ml/datasets/Tic-Tac-Toe+Endgame
+
+Running the code:
+1. run the following script: pip install -r requirements.txt to install the following libraries
+    Pandas
+    Numpy
+    Scikit
+
+2. Then, run the code normally. The data is downloaded and separated into train and test. The train dataset will train the algorithm 
+to get the best weights for the predict function to make a prediction based on the test data
+
+Table Summary
+    The table is set up based on the training set results. It shows the error in the code, the activation function, the learning rate, and the number of iterations
+the program ran. The table is self explanatory about how it should be interpreted.
+
