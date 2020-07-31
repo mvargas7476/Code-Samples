@@ -3,7 +3,7 @@
 //  Flash Chat iOS13
 //
 //  Created by Matias Vargas on 4/1/20.
-//  Copyright © 2020 Angela Yu. All rights reserved.
+//  Copyright © 2020 Brewery App. All rights reserved.
 //
 
 import Foundation
