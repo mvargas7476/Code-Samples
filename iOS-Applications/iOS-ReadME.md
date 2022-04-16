@@ -1,4 +1,4 @@
-iOS Folder
+# iOS Folder
 
 This folder contains all of the different apps I have developed while teaching myself how to use Xcode. Each Project has its own ReadME file so that s small explanation of what the app does can be give. The folders in here are set up in progressing order of what I learned. I have labeled them in the order in which I created the Apps. Again, this has been my personal project and a way to grow as a programmer.
 

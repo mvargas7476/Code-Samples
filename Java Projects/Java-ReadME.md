@@ -1,4 +1,4 @@
-Java Folder
+# Java Folder
 
 In this folder I have added a few of the things that I have worked while in my masters program. So far I have taken a class in Design Patterns and have added the projects that we manage to use while coding different exercises. The main DE Patterns we used were: Strategy, Factory, State. We did also learn about a few other DE Patterns while in this class. We learned about: Singleton, Flyweight, Observer, Publisher/Subscriber. 
 
