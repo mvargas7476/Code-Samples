@@ -1,0 +1,14 @@
+<!-- This base matches line 2 of the layout -->
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>This is the About Page</h1>
+            <p>paragraph</p>
+            <p>This is from the template: {{index .StringMap "test"}}</p>
+        </div>
+    </div>
+</div>
+{{end}}
