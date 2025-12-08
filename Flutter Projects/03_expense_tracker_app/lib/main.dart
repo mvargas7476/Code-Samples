@@ -1,5 +1,7 @@
 import 'package:expense_tracker_app/widgets/expenses.dart';
 import 'package:flutter/material.dart';
+// This imports the package for rotating the screen
+// import 'package:flutter/services.dart';
 
 // Setting up a color based on a seed that you se up here
 var kColorScheme = ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 21, 119, 205));
@@ -9,6 +11,13 @@ var kDarkScheme = ColorScheme.fromSeed(
 );
 
 void main() {
+  // These two functions allows us to lock the device orientation
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp
+  // ]).then((fn) {
+  //   runApp(const MainApp());
+  // });
   runApp(const MainApp());
 }
 
