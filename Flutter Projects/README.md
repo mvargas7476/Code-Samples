@@ -6,6 +6,9 @@ The folder is laid out in the order in which I did certain projects and wanted t
 and the 07_chat_app being the last. I have used this to learn dart and the flutter framework so that I can officially create an 
 original application of my own.
 
-Hope you enjoy
+As a final note, the last two projects use Firebase with some projects that have by now been deleted. I would be more than happy
+to update the code and create the projects once again if the need arises.
+
+Thank you, I hope you enjoy
 
 M. Vargas
