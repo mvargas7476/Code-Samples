@@ -1,0 +1,11 @@
+# This is how you can send HTTP requests using VS Code extension
+POST http://localhost:8080/events
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImV4cCI6MTc2NzUwNjAwNywidXNlcklkIjowfQ.JoJutWQcbV5H9Ko5Gt2_Vx69-SyOtl9oFfYL_Z-LwA4
+
+{
+    "name": "Other Test Event",
+    "description": "A test event",
+    "location": "A test location",
+    "datetime": "2026-01-03T17:45:00.000Z"
+}
