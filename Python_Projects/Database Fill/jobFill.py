@@ -1,10 +1,10 @@
-import mysql.connector
+import pymysql
 import random
 from faker import Faker
 
 fake = Faker()
 
-mydb = mysql.connector.connect(
+mydb = pymysql.connect(
   host = "127.0.0.1",
   user = "",
   password = "",

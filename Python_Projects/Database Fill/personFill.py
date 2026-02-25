@@ -1,9 +1,9 @@
-import mysql.connector
+import pymysql
 import names
 import random
 import datetime
 
-mydb = mysql.connector.connect(
+mydb = pymysql.connect(
   host = "127.0.0.1",
   user = "",
   password = "",
