@@ -1,11 +1,15 @@
-# Java Folder
+# Java Projects
 
-In this folder I have added a few of the things that I have worked while in my masters program. So far I have taken a class in Design Patterns and have added the projects that we manage to use while coding different exercises. The main DE Patterns we used were: Strategy, Factory, State. We did also learn about a few other DE Patterns while in this class. We learned about: Singleton, Flyweight, Observer, Publisher/Subscriber. 
+Design pattern implementations written in Java as part of a graduate-level Software Design Patterns course. Projects demonstrate practical application of core OOP patterns used in enterprise software development.
 
-We sadly did not get to write code showcasing all of the DE Patterns that we talked about but I do plan on adding projects that showcase those DE Patterns. Additionally, on these projects we were working in groups of two to achieve our goal. My partner in this projects is called Robert Diepenbrock. Which his name is in the projects. 
+## Projects
 
-Currently I have been focused on learning about iOS coding since our school would like to have an application that was individual to our school. 
+| Project | Patterns Covered |
+|---------|-----------------|
+| Factory Design Pattern | Factory Method — object creation without specifying concrete classes |
+| State Design Pattern | State — alter object behavior when internal state changes |
+| Design Pattern Final | Combined project applying multiple patterns (Strategy, Singleton, Observer, Publisher/Subscriber) |
 
-Thank you so much
-
-M. Vargas
+## Technologies
+- **Language**: Java
+- **Concepts**: OOP, SOLID principles, Gang of Four design patterns

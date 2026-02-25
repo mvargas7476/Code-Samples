@@ -1,13 +1,17 @@
-# Python Folder
+# Python Projects
 
-This folder contains some of the Machine Learning projects that I have created. I practiced using scikit library. However, I did program some of the Machine Learning processes myself. I programmed a Linear Regression algorithm, and compared it to the scikit linear regression algorithm. 
+Machine learning models, data analysis pipelines, and low-level programming puzzles. Projects range from implementing ML algorithms from scratch to comparing them against scikit-learn, plus solving byte-manipulation challenges.
 
-I also created a Neural Network myself, and used it to calculate the error of prediction based on the data given. Both of these projects print the error of accuracy to which they are predicting results. Lastly, I used scikit learn to learn about k clustering and picture quantization. 
+## Projects
 
-I have now also added the Tom's Data Onion puzzle solutions. Most of these puzzles work on very low level computations, using a lot of bit and bytes manipulations. 
+| Project | Description |
+|---------|-------------|
+| Linear Regression | Manual implementation of linear regression compared against scikit-learn — outputs prediction error |
+| Neural Networks | Neural network built from scratch to predict outcomes and measure accuracy |
+| K-Clusters | K-means clustering and image quantization using scikit-learn |
+| Database Fill | Script to populate a database with generated data |
+| Toms Data Onion | Solutions to a multi-layer low-level programming puzzle involving bit/byte manipulation, ASCII encoding, and networking protocols |
 
-Each folder contains a README.txt file that will explain how to run the program and discusses the results. In the case of Tom's Onion, the readme explains the layers of the puzzle and how I found out about the puzzle.
-
-Hope you enjoy
-
-M. Vargas
+## Technologies
+- **Language**: Python
+- **Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib, Boto3
