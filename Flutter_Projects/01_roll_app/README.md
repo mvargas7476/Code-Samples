@@ -1,16 +1,17 @@
-# roll_app
+# Roll App
 
-A new Flutter project.
+A simple dice-roller — my first Flutter app. Tap the button (or the die) to roll, and a random face animates in over a gradient background.
 
-## Getting Started
+## What it demonstrates
+- Core widget composition and layout
+- `StatefulWidget` and `setState` for reactive UI
+- Randomization (`dart:math`) and reusable styled widgets
 
-This project is a starting point for a Flutter application.
+## Tech
+Flutter · Dart
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Run
+```bash
+flutter pub get
+flutter run
+```
