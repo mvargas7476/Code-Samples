@@ -1,0 +1,37 @@
+# ---- OS / editor ----
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# ---- Secrets / local config (never commit) ----
+.env
+*.env
+Secrets.plist
+GoogleService-Info.plist
+google-services.json
+
+# ---- iOS / Xcode ----
+**/Pods/
+**/xcuserdata/
+**/DerivedData/
+*.xcuserstate
+
+# ---- Flutter / Dart ----
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+**/build/
+
+# ---- Java ----
+*.class
+
+# ---- Python ----
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# ---- Go (generated sample output) ----
+Go_Projects/04_price_calc/result_*.json
