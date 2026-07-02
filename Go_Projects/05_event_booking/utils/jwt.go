@@ -2,12 +2,20 @@ package utils
 
 import (
 	"errors"
+	"os"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
 )
 
-const secretKey = "supersecretkeytouse"
+// secretKey is read from the EVENT_API_JWT_SECRET environment variable.
+// The fallback is for local development only — set the env var in any real deployment.
+func secretKey() string {
+	if key := os.Getenv("EVENT_API_JWT_SECRET"); key != "" {
+		return key
+	}
+	return "dev-only-insecure-secret-change-me"
+}
 
 func GenerateToken(email string, userId int64) (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
@@ -16,7 +24,7 @@ func GenerateToken(email string, userId int64) (string, error) {
 		"exp": time.Now().Add(time.Hour * 2).Unix(), // This is an expiration time
 	})
 	
-	return token.SignedString([]byte(secretKey))
+	return token.SignedString([]byte(secretKey()))
 }
 
 func VerifyToken(token string) (int64, error) {
@@ -27,7 +35,7 @@ func VerifyToken(token string) (int64, error) {
 		if !ok {
 			return nil, errors.New("Unexpected signing method")
 		}
-		return []byte(secretKey), nil
+		return []byte(secretKey()), nil
 	})
 	
 	if err != nil {
