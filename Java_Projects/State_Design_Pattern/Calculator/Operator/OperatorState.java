@@ -1,7 +1,7 @@
-package Calulator.Operator;
+package Calculator.Operator;
 
-import Calulator.Calculator;
-import Calulator.EntryState.EnterFirstDigit;
+import Calculator.Calculator;
+import Calculator.EntryState.EnterFirstDigit;
 
 /**
  *

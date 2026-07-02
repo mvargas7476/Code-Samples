@@ -1,7 +1,7 @@
-package Calulator.EntryState;
+package Calculator.EntryState;
 
-import Calulator.Calculator;
-import Calulator.Operator.OperatorStateFactory;
+import Calculator.Calculator;
+import Calculator.Operator.OperatorStateFactory;
 
 /**
  *

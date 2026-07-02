@@ -1,6 +1,6 @@
-package Calulator.EntryState;
+package Calculator.EntryState;
 
-import Calulator.Calculator;
+import Calculator.Calculator;
 
 
 /**

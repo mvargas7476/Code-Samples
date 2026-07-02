@@ -1,6 +1,6 @@
-package Calulator.Operator;
+package Calculator.Operator;
 
-import Calulator.Calculator;
+import Calculator.Calculator;
 
 /**
  *

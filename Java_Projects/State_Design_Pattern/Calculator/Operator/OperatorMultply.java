@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Calulator.Operator;
+package Calculator.Operator;
 
-import Calulator.Calculator;
+import Calculator.Calculator;
 
 /**
  *
