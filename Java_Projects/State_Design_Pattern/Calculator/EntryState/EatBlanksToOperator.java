@@ -1,13 +1,13 @@
-package Calulator.EntryState;
+package Calculator.EntryState;
 
-import Calulator.Calculator;
-import Calulator.Operator.OperatorStateFactory;
+import Calculator.Calculator;
+import Calculator.Operator.OperatorStateFactory;
 
 /**
  *
  * @author Robert Diepenbrock
  */
-public class EatSpace extends EntryState {
+public class EatBlanksToOperator extends EntryState {
     // Eats any spaces before an operator 
     @Override
     public void processKeyStroke(Calculator calc, char keyStroke) {
