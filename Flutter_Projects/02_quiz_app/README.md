@@ -1,16 +1,18 @@
-# quiz_app
+# Quiz App
 
-A new Flutter project.
+A multiple-choice quiz that walks through a start screen, a sequence of questions with shuffled answers, and a results screen summarizing which answers were correct along with the final score.
 
-## Getting Started
+## What it demonstrates
+- Screen-to-screen navigation driven by app state
+- Separating models (`quiz_question`) and data from UI widgets
+- Building a results summary from collected answers
+- Custom fonts with `google_fonts`
 
-This project is a starting point for a Flutter application.
+## Tech
+Flutter · Dart · google_fonts
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Run
+```bash
+flutter pub get
+flutter run
+```
