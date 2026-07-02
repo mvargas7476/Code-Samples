@@ -30,14 +30,16 @@ The projects here span independent work, graduate coursework, and guided builds 
 
 ### Demonstrated in this repository
 - **Languages:** Go, Java, Python, Dart, Swift, JavaScript, HTML/CSS
-- **Frameworks & libraries:** Flutter, Gin, Riverpod
+- **Frameworks & libraries:** Flutter, Gin, Riverpod, Vite 
 - **Databases & backends:** SQLite, Firebase (Auth, Firestore, Realtime Database), MySQL
 
 ### Also experienced with (professional work)
 - **Languages:** C#, TypeScript, Kotlin, PHP, Node.js
-- **Frameworks:** React
-- **Databases:** SQL Server, MongoDB
-- **Cloud:** AWS, Firebase
+- **Frameworks:** React, Laravel, Django
+- **Databases:** SQL Server, MongoDB, PostgreSQL
+- **Cloud:** AWS, Firebase, Azure
+- **IaC:** Terraform
+- **AI:** ClaudeCode, Codex, Bedrock, OpenClaw, Hermes
 
 ### Operating systems
 macOS · Linux · Windows
