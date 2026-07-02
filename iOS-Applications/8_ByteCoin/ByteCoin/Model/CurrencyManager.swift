@@ -14,7 +14,8 @@ protocol CurrencyManagerDelegate{
 }
 
 struct CurrencyManager {
-let currencyURL = "https://rest.coinapi.io/v1/exchangerate/BTC/USD?apikey=65A12F88-D770-44C2-AB5C-E3A96A92CF66"
+// API key is appended from the git-ignored Secrets.plist (see README) rather than hard-coded.
+let currencyURL = "https://rest.coinapi.io/v1/exchangerate/BTC/USD?apikey=\(CoinManager.loadAPIKey())"
 
 var delegate: CurrencyManagerDelegate?
 

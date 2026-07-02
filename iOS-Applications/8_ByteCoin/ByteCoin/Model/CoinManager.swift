@@ -18,7 +18,8 @@ struct CoinManager {
     var delegate: CoinManagerDelegate?
     
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC"
-    let apiKey = "65A12F88-D770-44C2-AB5C-E3A96A92CF66"
+    // Loaded from a git-ignored Secrets.plist (see README) — never hard-code API keys.
+    let apiKey = CoinManager.loadAPIKey()
     
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
 
@@ -78,5 +79,16 @@ struct CoinManager {
             return nil
         }
     }
-    
+
+    /// Reads the CoinAPI key from a git-ignored `Secrets.plist` bundled with the app.
+    /// Add `Secrets.plist` with a `COINAPI_KEY` string entry (see README) to run the app.
+    static func loadAPIKey() -> String {
+        guard let url = Bundle.main.url(forResource: "Secrets", withExtension: "plist"),
+              let dict = NSDictionary(contentsOf: url),
+              let key = dict["COINAPI_KEY"] as? String, !key.isEmpty else {
+            return "YOUR_COINAPI_KEY"
+        }
+        return key
+    }
+
 }
