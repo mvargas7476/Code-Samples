@@ -2,8 +2,6 @@
 
 A portfolio of hands-on software projects across multiple languages, frameworks, and platforms — from mobile apps and backend APIs to machine-learning models built from scratch and classic design-pattern implementations. It's meant to give prospective employers a fast read on technical breadth, code style, and how I approach problems.
 
-📄 **[Resume / CV](Matias_Vargas_CV_2025.pdf)**
-
 ## About
 
 I'm a **Senior Software Engineer with 6 years of experience**, working across the full stack — frontend, backend, and databases. I came to software from education: I taught Robotics and Programming at a junior high in the Dallas–Fort Worth area, and it was there that I discovered how much I enjoyed building software and decided to change careers. The move built on a Minor in Software Development, and along the way I earned a Master's in Software Engineering.
