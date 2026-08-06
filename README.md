@@ -10,6 +10,7 @@ The projects here span independent work, graduate coursework, and guided builds 
 
 ## Highlights
 
+- **[Full Stack — GM Story Tracker](Web_Projects/gm-story-tracker/)** — campaign-prep app for tabletop RPG Game Masters, built as a three-service Docker Compose stack: a Django REST Framework API over PostgreSQL and a typed SvelteKit SPA. Relational modeling across six related models, `ModelViewSet`s with `prefetch_related` to avoid N+1 reads, and Svelte 5 runes with SSR data loading — `docker compose up --build` brings up the database, migrations, and both servers with hot reload.
 - **[Go — Event Booking API](Go_Projects/05_event_booking/)** — REST API with JWT auth, bcrypt password hashing, protected route groups, and SQLite persistence, organized into routes / models / middleware / utils layers.
 - **[Go — Concurrent Price Calculator](Go_Projects/04_price_calc/)** — idiomatic concurrency with goroutines, channels, and `select`, plus an `IOManager` interface with file and CLI implementations (dependency injection).
 - **[Flutter — Chat App](Flutter_Projects/07_chat_app/)** & **[Favorite Places](Flutter_Projects/06_favorite_places_app/)** — a full-stack Firebase Auth + Firestore chat app, and a device-integrated app using camera, geolocation, Google Maps, and an on-device SQLite store.
@@ -23,20 +24,21 @@ The projects here span independent work, graduate coursework, and guided builds 
 | [Go_Projects/](Go_Projects/) | 5 Go projects spanning CLI tools, concurrency, and a REST API with JWT auth | Go, Gin, SQLite, JWT |
 | [Java_Projects/](Java_Projects/) | Object-oriented design-pattern implementations (Factory, Strategy, State) | Java |
 | [Python_Projects/](Python_Projects/) | Machine-learning models built from scratch, a data-generation pipeline, and low-level decoding puzzles | Python, NumPy, Pandas, scikit-learn |
-| [Web_Projects/](Web_Projects/) | A static multi-page website built with a vanilla stack | HTML, CSS, JavaScript |
+| [Web_Projects/](Web_Projects/) | Full-stack web work — a dockerized Django REST + SvelteKit campaign tracker for tabletop RPG Game Masters | Django, DRF, SvelteKit, TypeScript, PostgreSQL, Docker |
 | [iOS-Applications/](iOS-Applications/) | 9 native iOS apps built while completing an iOS & Swift bootcamp | Swift, UIKit, AVFoundation, Firebase |
 
 ## Technology Experience
 
 ### Demonstrated in this repository
-- **Languages:** Go, Java, Python, Dart, Swift, JavaScript, HTML/CSS
-- **Frameworks & libraries:** Flutter, Gin, Riverpod, Vite 
-- **Databases & backends:** SQLite, Firebase (Auth, Firestore, Realtime Database), MySQL
+- **Languages:** Go, Java, Python, Dart, Swift, TypeScript, JavaScript, HTML/CSS
+- **Frameworks & libraries:** Flutter, Gin, Django, Django REST Framework, SvelteKit, Riverpod, Vite
+- **Databases & backends:** PostgreSQL, SQLite, Firebase (Auth, Firestore, Realtime Database), MySQL
+- **Infrastructure:** Docker, Docker Compose
 
 ### Also experienced with (professional work)
-- **Languages:** C#, TypeScript, Kotlin, PHP, Node.js
-- **Frameworks:** React, Laravel, Django
-- **Databases:** SQL Server, MongoDB, PostgreSQL
+- **Languages:** C#, Kotlin, PHP, Node.js
+- **Frameworks:** React, Laravel
+- **Databases:** SQL Server, MongoDB
 - **Cloud:** AWS, Firebase, Azure
 - **IaC:** Terraform
 - **AI:** ClaudeCode, Codex, Bedrock, OpenClaw, Hermes
