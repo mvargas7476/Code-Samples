@@ -1,0 +1,306 @@
+/* =====================================================================
+   Global base styles for the whole app.
+   Imported once in src/routes/+layout.svelte, so it applies everywhere.
+   Mostly targets plain element selectors (body, input, button, nav a...)
+   so existing markup is styled automatically — no class changes needed.
+   ===================================================================== */
+
+/* ---- Design tokens: change a value here, it updates app-wide ---- */
+/* Non-color tokens are theme-independent. */
+:root {
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+
+    --radius: 8px;
+    --maxw: 900px;
+    --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+    /* Actor-kind hues (Act page, Game mode). Theme-independent base colors —
+       color-mix() blends each into the current surface, so they adapt to Light/Dark. */
+    --kind-adversary: #d64545; /* red   */
+    --kind-npc: #3f9d5a; /* green */
+    --kind-pc: #8f3fd0; /* purple */
+}
+
+/* Color tokens are theme-scoped. No attribute (or data-theme="dark") = Dark, the default.
+   The theme is set on <html> by app.html (pre-paint) + src/lib/theme.svelte.ts (on toggle). */
+:root,
+:root[data-theme='dark'] {
+    --color-bg: #1b3c53;
+    --color-surface: #234c6a;
+    --color-text: #ece3d8;
+    --color-muted: #a7b7c4;
+    --color-border: #456882;
+    --color-accent: #d2c1b6;
+    --color-accent-text: #1b3c53;
+    --color-danger: #f1a7a0;
+}
+
+:root[data-theme='light'] {
+    --color-bg: #f5efe6;
+    --color-surface: #ffffff;
+    --color-text: #1b3c53;
+    --color-muted: #456882;
+    --color-border: #cbdceb;
+    --color-accent: #3766a0; /* darkened for WCAG AA link/button contrast on the light bg */
+    --color-accent-text: #ffffff;
+    --color-danger: #b42318;
+}
+
+/* ---- Reset-ish ---- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ---- Page frame ---- */
+body {
+    margin: 0 auto;
+    max-width: var(--maxw);
+    padding: var(--space-4);
+    font-family: var(--font);
+    line-height: 1.5;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    margin: var(--space-4) 0 var(--space-2);
+}
+h1 {
+    font-size: 1.7rem;
+}
+h2 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Nav: a horizontal row of links (Flexbox) ---- */
+nav {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* ---- Form controls: styled by element, so every input/button gets it ---- */
+input,
+select,
+textarea {
+    font: inherit;
+    padding: var(--space-2);
+    margin: var(--space-1) var(--space-1) var(--space-1) 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: inherit;
+}
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 4rem;
+    resize: vertical;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: inherit;
+}
+/* Badges opt out: this recolours all four borders, which would wipe the --kind-* rail. */
+button:not(.badge):hover {
+    border-color: var(--color-accent);
+}
+button[type='submit'] {
+    background: var(--color-accent);
+    color: var(--color-accent-text);
+    border-color: var(--color-accent);
+}
+
+/* ---- Opt-in utility classes (add the class where you want them) ---- */
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-3);
+    margin: var(--space-2) 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.error {
+    color: var(--color-danger);
+    font-size: 0.9rem;
+}
+/* Preserve line breaks coming out of Django TextFields. */
+.prose {
+    white-space: pre-wrap;
+}
+/* De-emphasized text: empty-state lines, counts, secondary detail. */
+.muted {
+    color: var(--color-muted);
+}
+/* A link that looks like a button — for navigation styled as an action control.
+   Use <a class="btn" href> rather than <button onclick={goto()}> so open-in-new-tab,
+   copy-link, and screen-reader link semantics still work. Mirrors the button rule above. */
+.btn {
+    display: inline-block;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: inherit;
+    text-decoration: none;
+}
+.btn:hover {
+    border-color: var(--color-accent);
+    text-decoration: none;
+}
+/* A smaller .btn, for an action repeated once per table row. */
+.btn-sm {
+    padding: var(--space-1) var(--space-2);
+    font-size: 0.9rem;
+}
+/* A destructive-action button — a soft ("light") red that pops without shouting. */
+.btn-danger {
+    color: var(--color-danger);
+    background: color-mix(in srgb, var(--color-danger) 15%, var(--color-surface));
+    border-color: color-mix(in srgb, var(--color-danger) 40%, var(--color-border));
+}
+.btn-danger:hover {
+    background: color-mix(in srgb, var(--color-danger) 28%, var(--color-surface));
+    border-color: var(--color-danger);
+}
+/* ---- List page chrome: title + count on the left, primary action on the right ---- */
+.list-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin: var(--space-4) 0 var(--space-3);
+}
+.list-header h1 {
+    margin: 0; /* the flex wrapper owns the vertical rhythm now */
+}
+.count {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+/* Empty list: a dashed outline reads as "could hold things", not as a broken page. */
+.empty {
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    text-align: center;
+}
+/* Sits under .list-header while any badge filter is on — says what's hidden and how to undo it. */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-3);
+}
+
+/* ---- Badge: one piece of short metadata (kind, tier, type, faction, status). Text stays
+   --color-text — the raw --kind-* hues fail AA as text, so the hue goes in the fill/rail. ---- */
+.badge {
+    display: inline-block;
+    padding: 0 var(--space-2);
+    border: 1px solid var(--color-border);
+    /* rail always present, so neutral and kind badges don't jitter in a mixed row */
+    border-left: 3px solid var(--color-border);
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--color-muted) 15%, var(--color-surface));
+    color: var(--color-text);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    white-space: nowrap;
+}
+/* Kind variants reuse the Act page's Game-mode hues, so "adversary" is the same red in both.
+   A tint alone is too weak at badge size (red on the dark surface reads plum), hence the rail. */
+.badge[data-kind='adversary'] {
+    background: color-mix(in srgb, var(--kind-adversary) 18%, var(--color-surface));
+    border-color: color-mix(in srgb, var(--kind-adversary) 45%, var(--color-border));
+    border-left-color: var(--kind-adversary);
+}
+.badge[data-kind='npc'] {
+    background: color-mix(in srgb, var(--kind-npc) 18%, var(--color-surface));
+    border-color: color-mix(in srgb, var(--kind-npc) 45%, var(--color-border));
+    border-left-color: var(--kind-npc);
+}
+.badge[data-kind='pc'] {
+    background: color-mix(in srgb, var(--kind-pc) 18%, var(--color-surface));
+    border-color: color-mix(in srgb, var(--kind-pc) 45%, var(--color-border));
+    border-left-color: var(--kind-pc);
+}
+/* Flags a broken domain rule (a puzzle with <2 solutions). Match the STRING 'true': Svelte
+   renders data-warn={false} as data-warn="false", which a bare [data-warn] would also match. */
+.badge[data-warn='true'] {
+    background: color-mix(in srgb, var(--color-danger) 15%, var(--color-surface));
+    border-color: color-mix(in srgb, var(--color-danger) 40%, var(--color-border));
+    border-left-color: var(--color-danger);
+}
+/* ---- Interactive badges (FilterBadge). Hover/pressed are inset tints rather than border or
+   background changes, because both of those would paint over the --kind-* rail and fill. ---- */
+button.badge:hover {
+    box-shadow: inset 0 0 0 2rem color-mix(in srgb, var(--color-accent) 12%, transparent);
+}
+/* Pressed = this filter is on. */
+button.badge[aria-pressed='true'] {
+    box-shadow: inset 0 0 0 2rem color-mix(in srgb, var(--color-accent) 25%, transparent);
+    font-weight: 600;
+}
+button.badge:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+}
+
+/* Wraps instead of stretching, so a variable-length faction list can't blow out a table cell.
+   font-weight is reset because this sits inside a <th scope="row">, which is bold by default. */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin-top: var(--space-1);
+    font-weight: normal;
+}
+
+/* Hide visually but keep for screen readers (e.g. a label for an icon-only header). */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
