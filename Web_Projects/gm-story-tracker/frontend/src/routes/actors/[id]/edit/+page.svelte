@@ -1,5 +1,5 @@
 <script lang="ts">
-    import ActorForm from '$lib/components/ActorForm.svelte';
+    import ActorForm from '#lib/components/ActorForm.svelte';
     import { goto } from '$app/navigation';
     import type { PageData } from './$types';
 

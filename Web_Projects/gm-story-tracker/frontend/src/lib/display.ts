@@ -2,7 +2,7 @@
 // shows up on the list page, in an expanded card, and on the Act Detail summary line — and those
 // three had drifted into rendering the same field three different ways.
 
-import type { Actor, ActorKind, Environment, PuzzleStatus } from '$lib/types';
+import type { Actor, ActorKind, Environment, PuzzleStatus } from '#lib/types.ts';
 
 /** Human labels for `kind`. The API value is lowercase; nothing should render it raw. */
 export const KIND_LABEL: Record<ActorKind, string> = {

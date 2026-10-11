@@ -1,5 +1,5 @@
 <script lang="ts">
-    import PuzzleForm from '$lib/components/PuzzleForm.svelte';
+    import PuzzleForm from '#lib/components/PuzzleForm.svelte';
     import { goto } from '$app/navigation';
 
     let errors = $state<Record<string, string[]>>({});

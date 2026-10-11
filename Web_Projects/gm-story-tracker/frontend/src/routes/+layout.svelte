@@ -1,8 +1,8 @@
 <script lang="ts">
     import '../app.css';
-    import favicon from '$lib/assets/favicon.svg';
+    import favicon from '#lib/assets/favicon.svg';
     import { page } from '$app/state';
-    import { theme, toggleTheme, applyTheme } from '$lib/theme.svelte';
+    import { theme, toggleTheme, applyTheme } from '#lib/theme.svelte.ts';
 
     let { children } = $props();
 

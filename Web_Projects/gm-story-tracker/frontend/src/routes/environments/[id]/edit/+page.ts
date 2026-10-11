@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import { loadSuggestions } from '$lib/suggestions';
-import type { Environment } from '$lib/types';
+import { loadSuggestions } from '#lib/suggestions.ts';
+import type { Environment } from '#lib/types.ts';
 
 export const load: PageLoad = async ({ fetch, params }) => {
     const [res, allEnvironments] = await Promise.all([

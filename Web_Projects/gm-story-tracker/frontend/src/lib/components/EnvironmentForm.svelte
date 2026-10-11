@@ -1,8 +1,8 @@
 <script lang="ts">
     import { untrack } from 'svelte';
-    import { uniqueSorted } from '$lib/suggestions';
-    import { flattenErrors } from '$lib/errors';
-    import type { Environment } from '$lib/types';
+    import { uniqueSorted } from '#lib/suggestions.ts';
+    import { flattenErrors } from '#lib/errors.ts';
+    import type { Environment } from '#lib/types.ts';
 
     // Same contract as ActorForm: `initial` for edit / undefined for create, and onSave so the
     // PARENT owns the fetch (POST vs PATCH) and the delete button.

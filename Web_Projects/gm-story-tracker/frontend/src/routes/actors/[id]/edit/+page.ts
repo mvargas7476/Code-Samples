@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import { loadSuggestions } from '$lib/suggestions';
-import type { Actor } from '$lib/types';
+import { loadSuggestions } from '#lib/suggestions.ts';
+import type { Actor } from '#lib/types.ts';
 
 export const load: PageLoad = async ({ fetch, params }) => {
     const [res, allActors] = await Promise.all([

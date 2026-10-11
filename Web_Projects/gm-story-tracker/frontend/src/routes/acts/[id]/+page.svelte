@@ -2,10 +2,10 @@
     import type { PageData } from './$types';
     import { goto, invalidateAll } from '$app/navigation';
     import { page } from '$app/state';
-    import ActorCard from '$lib/components/ActorCard.svelte';
-    import EnvironmentCard from '$lib/components/EnvironmentCard.svelte';
-    import PuzzleCard from '$lib/components/PuzzleCard.svelte';
-    import { actorLine, environmentLine } from '$lib/display';
+    import ActorCard from '#lib/components/ActorCard.svelte';
+    import EnvironmentCard from '#lib/components/EnvironmentCard.svelte';
+    import PuzzleCard from '#lib/components/PuzzleCard.svelte';
+    import { actorLine, environmentLine } from '#lib/display.ts';
 
     // Getting all of the data from the backend
     let { data }: { data: PageData } = $props();
@@ -56,11 +56,11 @@
 
     <!-- Mode toggle: always visible in both modes -->
     {#if isGameMode}
-        <button type="button" onclick={() => goto(page.url.pathname, {replaceState: true, keepFocus: true, noScroll: true})}>
+        <button type="button" onclick={() => goto(page.url.pathname, {replace: true, reset: false})}>
             Exit Game Mode
         </button>
     {:else}
-        <button type="button" onclick={() => goto('?mode=game', {replaceState: true, keepFocus: true, noScroll: true})}>
+        <button type="button" onclick={() => goto('?mode=game', {replace: true, reset: false})}>
             Game Mode
         </button>
     {/if}

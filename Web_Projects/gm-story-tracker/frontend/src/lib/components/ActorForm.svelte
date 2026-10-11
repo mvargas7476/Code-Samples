@@ -1,9 +1,9 @@
 <script lang="ts">
     import { untrack } from 'svelte';
-    import { uniqueSorted } from '$lib/suggestions';
-    import { flattenErrors } from '$lib/errors';
-    import { KIND_LABEL } from '$lib/display';
-    import type { Actor } from '$lib/types';
+    import { uniqueSorted } from '#lib/suggestions.ts';
+    import { flattenErrors } from '#lib/errors.ts';
+    import { KIND_LABEL } from '#lib/display.ts';
+    import type { Actor } from '#lib/types.ts';
 
     // This created the original Props to use. Whether it is empty or reading them
     let {
