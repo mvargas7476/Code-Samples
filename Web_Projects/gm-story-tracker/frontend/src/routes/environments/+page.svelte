@@ -1,12 +1,12 @@
 <script lang="ts">
     import type { PageData } from './$types';
     import { SvelteSet } from 'svelte/reactivity';
-    import DataTable from '$lib/components/DataTable.svelte';
-    import EnvironmentCard from '$lib/components/EnvironmentCard.svelte';
-    import FilterBadge from '$lib/components/FilterBadge.svelte';
-    import { tierLabel } from '$lib/display';
-    import { badgeKey, filterByBadges } from '$lib/filters';
-    import type { Environment } from '$lib/types';
+    import DataTable from '#lib/components/DataTable.svelte';
+    import EnvironmentCard from '#lib/components/EnvironmentCard.svelte';
+    import FilterBadge from '#lib/components/FilterBadge.svelte';
+    import { tierLabel } from '#lib/display.ts';
+    import { badgeKey, filterByBadges } from '#lib/filters.ts';
+    import type { Environment } from '#lib/types.ts';
 
     let { data }: { data: PageData } = $props();
 

@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import type { ActDetail } from '$lib/types';
+import type { ActDetail } from '#lib/types.ts';
 
 export const load: PageLoad = async ({ fetch, params }) => {
     const res = await fetch(`/api/acts/${params.id}/`);

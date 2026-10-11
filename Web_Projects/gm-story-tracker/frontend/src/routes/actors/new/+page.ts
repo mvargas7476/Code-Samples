@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
-import { loadSuggestions } from '$lib/suggestions';
-import type { Actor } from '$lib/types';
+import { loadSuggestions } from '#lib/suggestions.ts';
+import type { Actor } from '#lib/types.ts';
 
 export const load: PageLoad = async ({ fetch }) => {
     // Only feeds the <datalist>s. loadSuggestions swallows every failure and returns [].

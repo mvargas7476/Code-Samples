@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import type { Adventure } from '$lib/types';
+import type { Adventure } from '#lib/types.ts';
 
 export const load: PageLoad = async ({ fetch }) => {
     const res = await fetch('/api/adventures/');

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import EnvironmentForm from '$lib/components/EnvironmentForm.svelte';
+    import EnvironmentForm from '#lib/components/EnvironmentForm.svelte';
     import { goto } from '$app/navigation';
     import type { PageData } from './$types';
 

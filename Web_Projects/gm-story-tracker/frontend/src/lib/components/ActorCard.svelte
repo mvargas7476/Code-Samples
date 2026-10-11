@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { tierLabel } from '$lib/display';
-    import type { Actor } from '$lib/types';
+    import { tierLabel } from '#lib/display.ts';
+    import type { Actor } from '#lib/types.ts';
     let { actor }: { actor: Actor } = $props();
 </script>
 

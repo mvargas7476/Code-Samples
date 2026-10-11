@@ -1,7 +1,7 @@
 <script lang="ts">
     import { untrack } from 'svelte';
-    import { flattenErrors } from '$lib/errors';
-    import type { Puzzle } from '$lib/types';
+    import { flattenErrors } from '#lib/errors.ts';
+    import type { Puzzle } from '#lib/types.ts';
 
     // Props: initial (edit) or undefined (create), field errors from the parent, submit handler, label
     let {

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Puzzle } from '$lib/types';
+    import type { Puzzle } from '#lib/types.ts';
     let { puzzle }: { puzzle: Puzzle } = $props();
 </script>
 

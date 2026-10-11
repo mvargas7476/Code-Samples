@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { badgeKey } from '$lib/filters';
-    import type { ActorKind } from '$lib/types';
+    import { badgeKey } from '#lib/filters.ts';
+    import type { ActorKind } from '#lib/types.ts';
     import type { SvelteSet } from 'svelte/reactivity';
 
     // A badge that toggles a list filter. Deliberately the same pixels as a static

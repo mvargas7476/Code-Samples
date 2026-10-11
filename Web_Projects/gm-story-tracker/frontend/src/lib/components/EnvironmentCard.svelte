@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { tierLabel } from '$lib/display';
-    import type { Environment } from '$lib/types';
+    import { tierLabel } from '#lib/display.ts';
+    import type { Environment } from '#lib/types.ts';
     let { environment }: { environment: Environment } = $props();
 </script>
 

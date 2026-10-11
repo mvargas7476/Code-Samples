@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { PageData } from './$types';
-    import DataTable from '$lib/components/DataTable.svelte';
-    import type { Adventure } from '$lib/types';
+    import DataTable from '#lib/components/DataTable.svelte';
+    import type { Adventure } from '#lib/types.ts';
 
     let { data }: { data: PageData } = $props();
 

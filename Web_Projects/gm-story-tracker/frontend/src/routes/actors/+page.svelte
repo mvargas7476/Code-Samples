@@ -1,12 +1,12 @@
 <script lang="ts">
     import type { PageData } from './$types';
     import { SvelteSet } from 'svelte/reactivity';
-    import DataTable from '$lib/components/DataTable.svelte';
-    import ActorCard from '$lib/components/ActorCard.svelte';
-    import FilterBadge from '$lib/components/FilterBadge.svelte';
-    import { KIND_LABEL, tierLabel } from '$lib/display';
-    import { badgeKey, filterByBadges } from '$lib/filters';
-    import type { Actor } from '$lib/types';
+    import DataTable from '#lib/components/DataTable.svelte';
+    import ActorCard from '#lib/components/ActorCard.svelte';
+    import FilterBadge from '#lib/components/FilterBadge.svelte';
+    import { KIND_LABEL, tierLabel } from '#lib/display.ts';
+    import { badgeKey, filterByBadges } from '#lib/filters.ts';
+    import type { Actor } from '#lib/types.ts';
 
     let { data }: { data: PageData } = $props();
 

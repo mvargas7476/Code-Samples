@@ -1,12 +1,12 @@
 <script lang="ts">
     import type { PageData } from './$types';
     import { SvelteSet } from 'svelte/reactivity';
-    import DataTable from '$lib/components/DataTable.svelte';
-    import PuzzleCard from '$lib/components/PuzzleCard.svelte';
-    import FilterBadge from '$lib/components/FilterBadge.svelte';
-    import { PUZZLE_STATUS_LABEL } from '$lib/display';
-    import { badgeKey, filterByBadges } from '$lib/filters';
-    import type { Puzzle } from '$lib/types';
+    import DataTable from '#lib/components/DataTable.svelte';
+    import PuzzleCard from '#lib/components/PuzzleCard.svelte';
+    import FilterBadge from '#lib/components/FilterBadge.svelte';
+    import { PUZZLE_STATUS_LABEL } from '#lib/display.ts';
+    import { badgeKey, filterByBadges } from '#lib/filters.ts';
+    import type { Puzzle } from '#lib/types.ts';
 
     let { data }: { data: PageData } = $props();
 

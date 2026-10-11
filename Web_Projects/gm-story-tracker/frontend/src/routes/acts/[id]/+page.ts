@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import type { ActDetail, Actor, Environment, Puzzle } from '$lib/types';
+import type { ActDetail, Actor, Environment, Puzzle } from '#lib/types.ts';
 
 export const load: PageLoad = async ({ params, fetch }) => {
     const [actsRes, actorsRes, environmentsRes, puzzlesRes] = await Promise.all([
